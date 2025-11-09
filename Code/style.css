@@ -1,0 +1,308 @@
+/* Definisikan Warna Utama sebagai Variabel CSS */
+:root {
+    --color-primary: #17A2B8; /* Biru/Cyan */
+    --color-secondary: #28A745; /* Hijau */
+    --color-text-dark: #333333;
+    --color-text-light: #FFFFFF;
+    --color-box-kuliner: #FBF7D6; 
+    --color-box-fashion: #FAE5FB; 
+    --color-box-kerajinan: #F7E5CF; 
+    --color-box-olahan-alam: #DAF4DC; 
+    --color-box-jasa-kreatif: #D1E5FC; 
+    --color-trust-1: #D9F7D2; 
+    --color-trust-2: #FDEBD0; 
+    --color-trust-3: #D9E9F7; 
+    --color-cta-bg: #F7D1D9; 
+    --color-cta-star: #FF6600; 
+    --color-cta-check: #28A745; 
+    --color-footer: #4caf50; 
+}
+/* FONT GLOBAL */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color-text-dark);
+}
+.poppins-font {
+    font-family: 'Poppins', sans-serif !important;
+}
+.montserrat-font {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/* UTILITIES */
+.section-title {
+    font-size: 1.5rem;
+    padding-left: 10px;
+}
+
+/* 1. HEADER */
+header {
+    background-color: var(--color-text-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.logo-container img {
+    height: 35px; /* Ukuran logo */
+}
+
+.search-bar .form-control {
+    border-color: #ced4da;
+    border-right: none;
+    font-size: 0.85rem;
+}
+.btn-search {
+    background-color: var(--color-secondary); 
+    color: var(--color-text-light);
+    border-radius: 0 0.25rem 0.25rem 0;
+    padding: 0.375rem 0.75rem;
+}
+.nav-icon {
+    color: #888;
+    font-size: 1.3rem;
+    margin-left: 0.75rem;
+    transition: color 0.2s;
+}
+.nav-icon:hover {
+    color: var(--color-secondary);
+}
+
+/* 2. BANNER SLIDER */
+.banner-slider {
+    /* Mengikuti margin konten utama */
+    max-width: 100%; 
+    padding: 0 15px; /* Sesuaikan dengan padding container utama */
+}
+.banner-img {
+    border-radius: 12px;
+    height: 250px; /* Tinggi pada desktop */
+    object-fit: cover;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: 1rem;
+}
+.carousel-control-prev, 
+.carousel-control-next {
+    width: 5%; /* Kecilkan area klik panah */
+}
+
+/* 3. KATEGORI */
+.kategori {
+    /* Mengikuti margin konten utama */
+    max-width: 100%;
+    padding: 0 50px; 
+}
+.category-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text-dark);
+    /* Ukuran Kotak Kategori Dibuat Lebih Besar */
+    height: 180px; 
+    width: 180px; 
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Jarak antar kotak dikelola oleh g-3 dan col-auto */
+    margin: 0; 
+}
+.kategori .row {
+    max-width: 100%; /* Batasi lebar total kategori */
+    margin: 0 auto;
+}
+.category-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.category-icon {
+    font-size: 3rem; /* Ikon sedikit lebih besar */
+    margin-bottom: 10px;
+}
+.category-text {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.bg-kuliner { background-color: var(--color-box-kuliner); color: #B37D00; }
+.bg-fashion { background-color: var(--color-box-fashion); color: #C2185B; }
+.bg-kerajinan { background-color: var(--color-box-kerajinan); color: #F57C00; }
+.bg-olahan-alam { background-color: var(--color-box-olahan-alam); color: #00796B; }
+.bg-jasa-kreatif { background-color: var(--color-box-jasa-kreatif); color: #1976D2; }
+
+
+/* 4. TRUST SIGNALS */
+.trust-signals {
+    /* Mengikuti margin konten utama */
+    max-width: 100%;
+    padding: 0 50px; 
+}
+.trust-box {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 10px;
+    min-height: 75px;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.trust-icon {
+    font-size: 2rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+.trust-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0;
+}
+.bg-trust-1 { background-color: var(--color-trust-1); color: var(--color-secondary); } /* Hijau */
+.bg-trust-2 { background-color: var(--color-trust-2); color: #FF8800; } /* Oranye */
+.bg-trust-3 { background-color: var(--color-trust-3); color: var(--color-primary); } /* Biru */
+
+/* 5. REKOMENDASI */
+.rekomendasi {
+    max-width: 100%;
+    padding: 0 50px;
+}
+.product-box {
+    background-color: #F8F8F8; 
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    /* Tinggi placeholder dikurangi 20px */
+    min-height: 180px; 
+    width: 100%;
+}
+.section-title {
+    padding-left: 10px; /* Tambahkan padding agar judul lurus dengan konten */
+    font-size: 1.5rem;
+}
+
+/* 6. CTA PELATIHAN */
+.pelatihan {
+    max-width: 100%;
+    padding: 0 15px;
+}
+.cta-box {
+    background-color: var(--color-cta-bg); 
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.star-icon {
+    font-size: 2rem;
+    color: var(--color-cta-star);
+}
+.btn-cta-jadwal {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap; /* Agar tombol tidak pindah baris */
+    display: flex;
+    align-items: center;
+}
+.check-icon {
+    font-size: 1.3rem;
+    color: var(--color-text-light);
+}
+.cta-box p {
+    line-height: 1.4;
+}
+
+/* 7. FOOTER */
+footer {
+    background-color: var(--color-footer); /* Warna baru: #4caf50 */
+    color: var(--color-text-light); /* Teks putih agar kontras */
+    font-size: 0.8rem;
+}
+.footer-text-bold {
+    font-weight: 700; /* Teks dipertebal */
+    margin-bottom: 0;
+}
+
+/* MEDIA QUERIES (Responsivitas) */
+@media (max-width: 991.98px) {
+    /* Tablet dan Mobile */
+    .kategori, .trust-signals, .rekomendasi, .pelatihan {
+        padding: 0 15px;
+    }
+    .banner-img {
+        height: 150px;
+    }
+    .search-bar {
+        /* Tampilkan search bar di mobile */
+        display: flex !important;
+        order: 2; /* Pindah ke bawah di mobile */
+        margin-top: 10px;
+        width: 100%;
+        max-width: 400px;
+    }
+    .container-fluid {
+        flex-wrap: wrap;
+    }
+    .nav-icons {
+        order: 3;
+    }
+    .logo-container {
+        order: 1;
+    }
+    .category-box {
+        width: 100px; 
+        height: 100px;
+    }
+    .category-icon {
+        font-size: 2.2rem;
+    }
+    .kategori .row {
+        max-width: none; /* Lepas batasan lebar di mobile */
+    }
+    .cta-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cta-box p {
+        margin-bottom: 15px !important;
+    }
+    .btn-cta-jadwal {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Mobile: Kategori menyesuaikan */
+    .category-box {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    /* Mobile Sangat Kecil */
+    .section-title {
+        font-size: 1.3rem;
+    }
+    .category-box {
+        width: 80px;
+        height: 80px;
+    }
+    .trust-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .trust-icon {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .trust-text {
+        font-size: 0.8rem;
+    }
+}
